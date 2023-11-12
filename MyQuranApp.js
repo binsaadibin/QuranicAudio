@@ -30,6 +30,7 @@ function getSurahs() {
         }
         //*select all surahs*//
        let allSurahs=document.querySelectorAll(".surahs div");
+    //    console.log(allSurahs)
     //    AyahsAudios,
     //    AyahsText;
        allSurahs.forEach((surah,index)=>{
@@ -38,7 +39,7 @@ function getSurahs() {
             fetch(`https://api.quran.gading.dev/surah/${index + 1}`)
              .then((response)=> response.json())
               .then((data)=>{
-                // console.log(data)
+                console.log(data)
                 let verses=data.data.verses;
                 AyahsAudios=[];
                 AyahsText=[];
