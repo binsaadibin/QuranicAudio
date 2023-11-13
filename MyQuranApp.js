@@ -30,7 +30,7 @@ function getSurahs() {
         }
         //*select all surahs*//
        let allSurahs=document.querySelectorAll(".surahs div");
-    //    console.log(allSurahs)
+    //    console.log(allSurahs[0])
     //    AyahsAudios,
     //    AyahsText;
        allSurahs.forEach((surah,index)=>{
@@ -56,10 +56,11 @@ function getSurahs() {
                 })
                 // console.log(AyahsAudios);
                 // console.log(AyahsText)
-                let ayahIndex=0;
+                // console.log(AyahsAudios[ayahIndex])
                 // audio.src=AyahsAudios[ayahIndex];
                 // ayah.innerHTML=AyahsText[ayahIndex];
                 // audio.play();
+                let ayahIndex=0;
                 changeAyah(ayahIndex)
                 audio.addEventListener("ended",()=>{
                     ayahIndex=ayahIndex + 1;
